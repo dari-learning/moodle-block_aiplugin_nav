@@ -2,6 +2,13 @@
 
 All notable changes to this plugin will be documented in this file.
 
+## [2.5.48] - 2026-10-11
+
+### Fixed
+- Replaced VoxRefine's blank orange icon with its official navy, cream and coral
+  waveform logo in Our software. The artwork is embedded locally and the card
+  accent now matches the brand. Links, pricing and other software cards are unchanged.
+
 ## [2.5.47] - 2026-10-11
 
 ### Added

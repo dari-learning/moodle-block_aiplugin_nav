@@ -1157,9 +1157,13 @@ class block_aiplugin_nav_payload {
                 'kind'   => 'Audio',
                 'desc'   => 'Reduces breaths in voiceovers using a sample of your own breathing, without changing recording timing.',
                 'price'  => '$10 USD per full WAV · Free 30-second preview',
-                'colour' => '#FF3C00',
-                'logo'   => '<svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'
-                    . '<rect width="180" height="180" rx="36" fill="#FF3C00"/></svg>',
+                'colour' => '#E5583A',
+                'logo'   => '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'
+                    . '<rect width="64" height="64" rx="12" fill="#1f2747"/>'
+                    . '<g stroke-linecap="round" stroke-width="5">'
+                    . '<path d="M14 26v12M22 20v24M30 14v36" stroke="#f6f1e7"/>'
+                    . '<path d="M38 29v6" stroke="#e5583a"/>'
+                    . '<path d="M46 20v24M54 26v12" stroke="#f6f1e7"/></g></svg>',
             ],
             [
                 'name'   => 'SmartForm AI',
