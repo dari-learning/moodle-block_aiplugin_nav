@@ -1152,6 +1152,16 @@ class block_aiplugin_nav_payload {
                     . '</svg>',
             ],
             [
+                'name'   => 'VoxRefine',
+                'url'    => 'https://voxrefine.app/',
+                'kind'   => 'Audio',
+                'desc'   => 'Reduces breaths in voiceovers using a sample of your own breathing, without changing recording timing.',
+                'price'  => '$10 USD per full WAV · Free 30-second preview',
+                'colour' => '#FF3C00',
+                'logo'   => '<svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'
+                    . '<rect width="180" height="180" rx="36" fill="#FF3C00"/></svg>',
+            ],
+            [
                 'name'   => 'SmartForm AI',
                 'url'    => 'https://smartformai.app',
                 'kind'   => 'Forms',

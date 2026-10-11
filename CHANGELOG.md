@@ -2,6 +2,14 @@
 
 All notable changes to this plugin will be documented in this file.
 
+## [2.5.47] - 2026-10-11
+
+### Added
+- Added VoxRefine to Our software alongside Trainly and SmartForm AI, with its
+  website link, breath-reduction description, free 30-second preview and
+  US$10 full-WAV price. This is an external audio tool, not an AI-credit plugin.
+- Preserved all existing software cards and the text-only AI Vocab Master spotlight.
+
 ## [2.5.46] - 2026-09-30
 
 ### Changed
