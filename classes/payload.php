@@ -75,7 +75,7 @@ class block_aiplugin_nav_payload {
                                         // AI Course Information, AI Slide Flow, AI Smart
                                         // Workbook, AI Course Format — all in "content".
         'ai_media'      => 'media', // AI Video Activity, AI Slideshow, AI SCORM Voiceover.
-        'ai_rto'        => 'rto', // AI RTO Compliance, RTO Compliance Dashboard, RPL Kit.
+        'ai_rto'        => 'rto', // AI RTO Compliance, RTO Compliance Dashboard.
         'ai_ux'         => 'site', // AI Verify ID, AI Support, AI Login Designer — all
                                         // Three sit in the mockup's Plugins "site" group.
                                         // NOTE: the mockup's *Settings* row for AI Verify ID
@@ -205,7 +205,6 @@ class block_aiplugin_nav_payload {
         'AI Mapping' => 'learning-mapping',
         'AI Course Information' => 'course-information',
         'AI Slide Flow' => 'product-explainer',
-        'RPL Kit' => 'rpl-kit',
         'RTO Compliance Dashboard' => 'rto-compliance',
         'RTO Compliance — Certificates' => 'rto-compliance',
         'RTO Compliance Settings' => 'rto-compliance',
@@ -219,8 +218,6 @@ class block_aiplugin_nav_payload {
         'AI Login Designer' => 'ai-login-designer',
         'Beacon — Reports & Analytics' => 'beacon',
         'Certificate Pro' => 'rto-compliance',
-        'Workplace Task' => 'workplace-task',
-        'AI Training Simulation' => 'ai-training-simulation',
         'Slides' => 'slides',
         'My Progress' => 'my-progress',
         'My Students Progress' => 'my-students-progress',
@@ -249,7 +246,6 @@ class block_aiplugin_nav_payload {
         'Payment Unlock Assignment' => 'payment-unlock-assignment',
         'Change Site Font' => 'change-site-font',
         'Cohort Branding' => 'cohort-branding',
-        'Custom Pages' => 'custom-pages',
         'Site Down Alert' => 'site-down-alert',
         'Video Compress' => 'video-compress',
         'Media Optimiser' => 'media-optimiser',
@@ -490,6 +486,11 @@ class block_aiplugin_nav_payload {
             $plugintype  = $plugin['plugin_type'];
             $pluginname  = $plugin['plugin_name'];
             $masterentry = $masterregistry[$component] ?? null;
+
+            // Unapproved plugins are never listed, whatever the registry or feed says.
+            if (in_array($component, self::UNAPPROVED_COMPONENTS, true)) {
+                continue;
+            }
 
             if ($statusmap !== null && isset($statusmap[$component])) {
                 $installed = !empty($statusmap[$component]['is_installed']);
@@ -860,6 +861,20 @@ class block_aiplugin_nav_payload {
      */
     const PRIVATE_COMPONENTS = [
         'qbehaviour_wilkinsoncoutts',
+    ];
+
+    /**
+     * Components that are not approved for release and must never appear in this block.
+     *
+     * They are absent from the generated registries. This list also stops them reaching the
+     * Plugins panel or the spotlight through a live LMS Labs feed, a cached copy of that feed
+     * or a stale registry, including on sites that already have one installed.
+     */
+    const UNAPPROVED_COMPONENTS = [
+        'local_custompage',
+        'local_rplkit',
+        'mod_aitrainingsim',
+        'mod_workplacetask',
     ];
 
     /** @var int Standard unlock price when a plugin carries no explicit credits_required. */

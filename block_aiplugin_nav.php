@@ -279,15 +279,6 @@ class block_aiplugin_nav extends block_base {
                 'icon' => 'layout-dashboard',
                 'category' => 'ai_rto',
             ],
-            'local_rplkit' => [
-                'name' => 'RPL Kit',
-                'plugin_type' => 'local',
-                'plugin_name' => 'rplkit',
-                'settings_url' => '/admin/settings.php?section=local_rplkit',
-                'page_url' => '/local/rplkit/index.php',
-                'icon' => 'file-check-2',
-                'category' => 'ai_rto',
-            ],
             // BLOCKS.
             'block_aigrader_dashboard' => [
                 'name' => 'AI Grader Dashboard',
@@ -995,19 +986,6 @@ class block_aiplugin_nav extends block_base {
             // Deprecated server-side (excluded from the lms-labs.com manifest), so
             // It must NEVER be re-added here.
             [
-                'name' => 'RPL Kit',
-                'component' => 'local_rplkit',
-                'plugin_type' => 'local',
-                'plugin_name' => 'rplkit',
-                'icon' => 'file-check-2',
-                'category' => 'ai_rto',
-                'description' => 'Generates ASQA-mapped RPL assessment kits for any unit of competency: theory quiz (essay questi' .
-                    'ons from Knowledge Evidence), SmartForm checklist (Performance Criteria), and Assignment Benchmarks criteria' .
-                        '. Integrates with RTO Compliance for shared qualification data.',
-                'access' => 'Site admin > Plugins > Local plugins > RPL Kit',
-                'goto_url' => '/local/rplkit/index.php',
-            ],
-            [
                 'name' => 'AI Support',
                 'component' => 'local_moodlesupport',
                 'plugin_type' => 'local',
@@ -1509,16 +1487,6 @@ class block_aiplugin_nav extends block_base {
                 'access' => 'Site admin > Plugins',
             ],
             [
-                'name' => 'Custom Pages',
-                'component' => 'local_custompage',
-                'plugin_type' => 'local',
-                'plugin_name' => 'custompage',
-                'icon' => 'box',
-                'category' => 'other',
-                'description' => 'Custom Pages.',
-                'access' => 'Site admin > Plugins',
-            ],
-            [
                 'name' => 'AI Essay Maker (Legacy)',
                 'component' => 'local_essaymaker',
                 'plugin_type' => 'local',
@@ -1546,26 +1514,6 @@ class block_aiplugin_nav extends block_base {
                 'icon' => 'box',
                 'category' => 'other',
                 'description' => 'Student Evidence Export.',
-                'access' => 'Site admin > Plugins',
-            ],
-            [
-                'name' => 'AI Training Simulation',
-                'component' => 'mod_aitrainingsim',
-                'plugin_type' => 'mod',
-                'plugin_name' => 'aitrainingsim',
-                'icon' => 'box',
-                'category' => 'other',
-                'description' => 'AI Training Simulation.',
-                'access' => 'Site admin > Plugins',
-            ],
-            [
-                'name' => 'Workplace Task',
-                'component' => 'mod_workplacetask',
-                'plugin_type' => 'mod',
-                'plugin_name' => 'workplacetask',
-                'icon' => 'box',
-                'category' => 'other',
-                'description' => 'Workplace Task.',
                 'access' => 'Site admin > Plugins',
             ],
             [

@@ -160,6 +160,9 @@ class spotlight {
         $items = [];
         foreach ($entries as $entry) {
             $component = (string) ($entry['component'] ?? '');
+            if (in_array($component, \block_aiplugin_nav_payload::UNAPPROVED_COMPONENTS, true)) {
+                continue;
+            }
             $row = $rows[$component] ?? null;
             // A missing or testing local row is still an approved docs-only preview.
             // It is not an install/unlock authority.

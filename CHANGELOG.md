@@ -2,6 +2,18 @@
 
 All notable changes to this plugin will be documented in this file.
 
+## [2.5.49] - 2026-10-14
+
+### Removed
+- RPL Kit (local_rplkit), Workplace Task (mod_workplacetask), Custom Pages
+  (local_custompage) and AI Training Simulation (mod_aitrainingsim) are not approved for
+  release and no longer appear anywhere in the block: not in the Plugins panel, search,
+  install or update offers, or the spotlight. They are removed from the bundled
+  registries, and a block-side exclusion keeps them out even if the LMS Labs feed, a
+  cached copy of it, or a site that already has one installed would otherwise list them.
+  Installed copies on client sites are left in place and stay reachable through Moodle's
+  own plugin pages.
+
 ## [2.5.48] - 2026-10-11
 
 ### Fixed
