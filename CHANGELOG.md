@@ -2,6 +2,12 @@
 
 All notable changes to this plugin will be documented in this file.
 
+## [2.5.52] - 2026-10-16
+
+### Fixed
+- Restore approved Custom Pages and RPL Kit entries in the Plugins panel, search, update detection and Spotlight.
+- Remove their obsolete withdrawal exclusions now that both have verified Ready releases. Preserve exclusions for AI Training Simulation, Workplace Task and private products.
+
 ## [2.5.51] - 2026-10-15
 
 ### Changed

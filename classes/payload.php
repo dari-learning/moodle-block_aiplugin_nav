@@ -871,8 +871,6 @@ class block_aiplugin_nav_payload {
      * or a stale registry, including on sites that already have one installed.
      */
     const UNAPPROVED_COMPONENTS = [
-        'local_custompage',
-        'local_rplkit',
         'mod_aitrainingsim',
         'mod_workplacetask',
     ];
