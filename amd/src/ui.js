@@ -619,10 +619,11 @@ row;
 
         html += '<div class="ainav2-bhead">';
         html += '  <div class="ainav2-brandrow" data-help="block" tabindex="0">';
-        html += '    <div class="ainav2-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
-            '<path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></div>';
-        html += '    <div class="ainav2-btext"><h2>AI Quick Links</h2><div class="ainav2-bsub">' +
-            '<a href="https://lms-labs.com" target="_blank" rel="noopener" class="ainav2-blink">LMS Labs</a></div></div>';
+        html += '    <div class="ainav2-btext"><a href="https://lms-labs.com/" target="_blank" ' +
+            'rel="noopener noreferrer" class="ainav2-logo-panel" aria-label="LMS Labs website">' +
+            '<img src="' + esc(DATA.wwwroot || '') + '/blocks/aiplugin_nav/pix/lms-labs-logo.png" ' +
+            'alt="LMS Labs by LMS Hosting Services" width="720" height="240"></a>' +
+            '<h2>AI Quick Links</h2></div>';
         html += '  </div>';
         if (DATA.cancredits) {
             html += '  <div class="ainav2-creditbox ainav2-ok" id="ainav2-creditbox" data-help="credits">';

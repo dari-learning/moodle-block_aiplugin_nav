@@ -709,6 +709,25 @@
     border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line));
     box-shadow: var(--e1);
 }
+.ainav2 .ainav2-logo-panel {
+    display: inline-flex;
+    max-width: 100%;
+    width: 240px;
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 8px;
+    background: transparent;
+}
+.ainav2 .ainav2-logo-panel img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.ainav2 .ainav2-logo-panel:focus-visible {
+    outline: 3px solid #7c3aed;
+    outline-offset: 3px;
+}
 .ainav2 .ainav2-btext {
     min-width: 0;
 }

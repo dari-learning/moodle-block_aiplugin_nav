@@ -2,6 +2,12 @@
 
 All notable changes to this plugin will be documented in this file.
 
+## [2.5.54] - 2026-10-19
+
+### Changed
+- Use the new LMS Labs chemistry logo on the light header card, linking to https://lms-labs.com/.
+- Bundle the logo locally so Moodle dashboards do not depend on a remote image request.
+
 ## [2.5.53] - 2026-10-16
 
 ### Changed
