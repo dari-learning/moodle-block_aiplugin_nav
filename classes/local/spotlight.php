@@ -263,13 +263,14 @@ class spotlight {
             $docs = '';
         }
 
-        // Preview image: the one LMS Labs publishes, else the bundled one. Text-only plugins
+        // Prefer bundled artwork so new releases work before website publication. Text-only plugins
         // get neither, whatever the feed, its cache or the bundled files contain.
         $image = '';
         if (!in_array($component, self::TEXT_ONLY_COMPONENTS, true)) {
-            $image = live_feed::image_url($entry['image'] ?? '');
-            if ($image === '' && is_readable(__DIR__ . '/../../pix/spotlight/' . $component . '.jpg')) {
+            if (is_readable(__DIR__ . '/../../pix/spotlight/' . $component . '.jpg')) {
                 $image = $output->image_url('spotlight/' . $component, 'block_aiplugin_nav')->out(false);
+            } else {
+                $image = live_feed::image_url($entry['image'] ?? '');
             }
         }
 

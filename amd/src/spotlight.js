@@ -186,9 +186,10 @@ function createSpotlight(opts) {
     const features = item => '<ul class="ainav2-sp-feats">' + item.features.map(f =>
         '<li>' + icon('check', 3) + '<span>' + esc(f) + '</span></li>').join('') + '</ul>';
 
-    const shot = item => '<div class="ainav2-sp-shot">' + (item.image
-        ? '<img src="' + esc(item.image) + '" alt="' + esc(str('screenshot', item.name)) + '" loading="lazy" decoding="async">'
-        : '') + '</div>';
+    const shot = item => item.image
+        ? '<div class="ainav2-sp-shot"><img src="' + esc(item.image) + '" alt="' +
+            esc(str('screenshot', item.name)) + '" loading="lazy" decoding="async"></div>'
+        : '';
 
     const priceLabel = (item, key) => {
         if (item.pending) {
@@ -232,6 +233,9 @@ function copyHtml(sp, item) {
  * @return {string}
  */
 function shotHtml(sp, item) {
+    if (!item.image) {
+        return '';
+    }
     return '<div class="ainav2-sp-tilt"><div class="ainav2-sp-float">' + sp.shot(item) +
         (item.statvalue ? '<div class="ainav2-sp-stat"><b>' + esc(item.statvalue) + '</b><span>' + esc(item.statlabel) +
             '</span></div>' : '') + '</div></div>';

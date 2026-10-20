@@ -2,6 +2,16 @@
 
 All notable changes to this plugin will be documented in this file.
 
+## [2.5.55] - 2026-10-20
+
+### Fixed
+- Supply the missing Spotlight artwork for catalogue cards 52–72, with local copies for Moodle.
+- Keep Vocabulary Mastery text-only without an empty white preview panel.
+- Put AI Visual Learning, AI Safety Hazards and AI Knowledge Check in Content.
+- Classify AI Mapping as RTO & Compliance and Workplace Task as Grading & Assessment.
+- Keep Course Recertification and Completion Auto-Suspend in Training & Scheduling across plugin and settings lists.
+- Treat generic AI content categories consistently, including older catalogue entries.
+
 ## [2.5.54] - 2026-10-19
 
 ### Changed

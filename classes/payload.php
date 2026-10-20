@@ -65,9 +65,8 @@ class block_aiplugin_nav_payload {
     /** @var array Legacy category value => the contract's seven display categories. */
     const CATEGORY_MAP = [
         // AI plugin categories.
-        'ai'            => 'assess', // No live entries (commented-out testing stubs only);
-                                        // Those stubs were themselves mostly quiz/mod grading
-                                        // plugins, so 'assess' is the closest default.
+        'ai'            => 'content', // Generic AI activities create learning content.
+        'ai_activities' => 'content', // Dynamic catalogue entries use this alias.
         'ai_grading'    => 'assess', // AI Essay Grader, AI Quiz Maker, AI Knowledge Check,
                                         // AI Mapping, Assignment Benchmarks, AI Quiz Remedial
                                         // Learning — all land in mockup's "assess" group.
@@ -118,6 +117,14 @@ class block_aiplugin_nav_payload {
      * 'component' field in get_complete_plugin_registry()).
      */
     const CATEGORY_OVERRIDES = [
+        // Preserve educational purpose even when installed registries are older.
+        'mod_visuallearning'           => 'content',
+        'mod_aisafetyhazards'           => 'content',
+        'mod_aiknowledgecheck'          => 'content',
+        'mod_learningmapping'          => 'rto',
+        'mod_workplacetask'             => 'assess',
+        'local_completionsuspend'      => 'training',
+        'local_recertify'              => 'training',
         // Legacy category 'training', but mockup's Content & Courses group.
         'local_activitynav'             => 'content',
         // Legacy category 'training', but mockup's Enrolment & Access group.
