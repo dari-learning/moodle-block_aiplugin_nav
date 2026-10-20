@@ -2,6 +2,12 @@
 
 All notable changes to this plugin will be documented in this file.
 
+## [2.5.56] - 2026-10-20
+
+### Changed
+- Refresh Quick Links and Spotlight from the approved public LMS Labs catalogue.
+- Preserve approved prices and exclude hidden, testing and private products.
+
 ## [2.5.55] - 2026-10-20
 
 ### Fixed

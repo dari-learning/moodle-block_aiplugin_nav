@@ -28,9 +28,9 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'block_aiplugin_nav';
 // Ten-digit Marketplace scheme: YYYYMMDDXX.
-$plugin->version = 2026102000;
-$plugin->release = '2.5.55';
-$plugin->release_prev = '2.5.54';
+$plugin->version = 2026102001;
+$plugin->release = '2.5.56';
+$plugin->release_prev = '2.5.55';
 $plugin->requires = 2022041900;
 $plugin->supported = [400, 502];
 $plugin->maturity = MATURITY_STABLE;
