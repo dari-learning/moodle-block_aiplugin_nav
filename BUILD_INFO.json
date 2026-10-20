@@ -1,12 +1,12 @@
 {
   "component": "block_aiplugin_nav",
   "folder": "aiplugin_nav",
-  "version": "2.5.57",
-  "numeric_version": "2026102002",
-  "build_timestamp": "2026-10-20T10:56:48.461Z",
-  "build_id": "45a2042bd8b7e6a7",
-  "verification": "45a2042bd8b7e6a7f665ed4660b2ee6eb54b6fcf4d285e5f02945a3665fbbccc",
+  "version": "2.5.58",
+  "numeric_version": "2026102003",
+  "build_timestamp": "2026-10-20T13:36:10.078Z",
+  "build_id": "a744db3d89e87e3e",
+  "verification": "a744db3d89e87e3ef543fd4f0e562da6b94c4b3a018ed227f6021df13a6f555e",
   "verification_scheme": "sha256(baseZipSha:catalogueDigest:release:numericVersion)",
-  "catalogue_digest": "f28e90ac63e1d2b70121dff8aad045a7f8dff7fae74e8117502ed166d3061d10",
-  "base_zip_sha256": "d1ba9185981690639bf5e216d68653c511477179f40d1860f338a98af4697dc2"
+  "catalogue_digest": "df72f2b58ca5866f2f04c666c69d9c0d18d9e5e3ea760a098d2f7d6dce5a3134",
+  "base_zip_sha256": "1a15d0c0ae95c774da7fd1446ad3482528c30a7a99431d5d10ecb25fb7637e69"
 }
