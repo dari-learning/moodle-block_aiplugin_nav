@@ -2,6 +2,13 @@
 
 All notable changes to this plugin will be documented in this file.
 
+## [2.5.62] - 2026-10-26
+
+### Fixed
+- Restore Custom Pages — Confirmations under Reports after the catalogue refresh.
+- Restore the verified Custom Pages settings and page-management links.
+- Preserve the latest live catalogue, Spotlight artwork and all unrelated plugin behaviour.
+
 ## [2.5.61] - 2026-10-26
 
 ### Changed
