@@ -775,7 +775,9 @@ class block_aiplugin_nav_payload {
         require_once($CFG->libdir . '/adminlib.php');
 
         try {
-            return (bool) admin_get_root()->locate($section);
+            $page = admin_get_root()->locate($section);
+            // The admin/settings.php endpoint cannot render categories or external admin pages.
+            return $page instanceof \admin_settingpage && $page->check_access();
         } catch (\Throwable $e) {
             return false;
         }

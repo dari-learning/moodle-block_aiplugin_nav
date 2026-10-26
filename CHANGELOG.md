@@ -2,6 +2,15 @@
 
 All notable changes to this plugin will be documented in this file.
 
+## [2.5.66] - 2026-10-26
+
+### Fixed
+- Keep Plugins, Settings, Manage and Reports visible when the home view collapses.
+- Move keyboard focus into the selected panel and avoid competing Spotlight scrolling.
+- Apply audited settings destinations and verify real, accessible Moodle settings pages.
+- Preserve the approved public catalogue, Custom Pages Confirmations, Beacon and KPI settings.
+- Exclude the paused PDF marking release; do not retry any blocked release jobs.
+
 ## [2.5.65] - 2026-10-26
 
 ### Changed

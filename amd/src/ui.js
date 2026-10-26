@@ -1609,6 +1609,26 @@ k;
         els.home.classList.add('ainav2-hide');
         els.panel.classList.add('ainav2-show');
         els.plist.scrollTop = 0;
+        revealPanelHeading();
+    }
+
+    /**
+     * Keep the selected panel visible after the taller home view collapses.
+     *
+     * Browser scroll anchoring can otherwise leave the next Moodle block in
+     * view. Use the heading so native scrolling also handles theme containers.
+     */
+    function revealPanelHeading() {
+        window.requestAnimationFrame(function() {
+            if (!els.panel.classList.contains('ainav2-show')) {
+                return;
+            }
+            els.ptitle.setAttribute('tabindex', '-1');
+            els.ptitle.style.scrollMarginTop = '96px';
+            els.ptitle.style.scrollMarginBottom = '24px';
+            els.ptitle.focus({preventScroll: true});
+            els.ptitle.scrollIntoView({block: 'nearest', inline: 'nearest', behavior: 'instant'});
+        });
     }
 
     /**
@@ -1628,9 +1648,6 @@ k;
         var k;
         for (k = 0; k < groups.length; k++) {
             groups[k].classList.add('ainav2-open');
-        }
-        if (els.root && els.root.scrollIntoView) {
-            els.root.scrollIntoView({block: 'start', behavior: reduceMotion ? 'auto' : 'smooth'});
         }
     }
 
