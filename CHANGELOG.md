@@ -2,6 +2,14 @@
 
 All notable changes to this plugin will be documented in this file.
 
+## [2.5.64] - 2026-10-26
+
+### Fixed
+- Correct Beacon's general settings destination.
+- Add a separate Beacon — KPI Settings link under Plugin Settings.
+- Verify every additional settings section before displaying it.
+- Preserve Custom Pages Confirmations, the live catalogue and Spotlight artwork.
+
 ## [2.5.63] - 2026-10-26
 
 ### Changed

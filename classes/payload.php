@@ -760,7 +760,25 @@ class block_aiplugin_nav_payload {
             return null;
         }
 
-        return $absolute;
+        return self::admin_section_exists($section) ? $absolute : null;
+    }
+
+    /**
+     * Whether a named section exists in this site's admin settings tree.
+     *
+     * @param string $section Section name, as used by /admin/settings.php?section=.
+     * @return bool
+     */
+    private static function admin_section_exists(string $section): bool {
+        global $CFG;
+
+        require_once($CFG->libdir . '/adminlib.php');
+
+        try {
+            return (bool) admin_get_root()->locate($section);
+        } catch (\Throwable $e) {
+            return false;
+        }
     }
 
     // The "settings" / "manage" / "reports" arrays — built from get_master_plugin_registry(),
@@ -812,7 +830,7 @@ class block_aiplugin_nav_payload {
             $settingsurl = self::verified_settings_url((string) ($plugin['settings_url'] ?? ''));
             if ($settingsurl !== null) {
                 $settings[] = [
-                    'name'       => $plugin['name'],
+                    'name'       => $plugin['settings_name'] ?? $plugin['name'],
                     'cat'        => $cat,
                     'ptype'      => $ptype,
                     'desc'       => $desc,
@@ -821,6 +839,24 @@ class block_aiplugin_nav_payload {
                     // No per-plugin "is this configured" signal exists in the registries
                     // (would require inspecting each plugin's own config table/settings).
                     // Left false; see payload_notes.md ("configured").
+                    'configured' => false,
+                ];
+            }
+
+            // Some plugins register more than one settings page. Verify each
+            // destination independently, including the same admin capability check.
+            foreach ($plugin['additional_settings'] ?? [] as $setting) {
+                $extraurl = self::verified_settings_url((string) ($setting['url'] ?? ''));
+                if ($extraurl === null) {
+                    continue;
+                }
+                $settings[] = [
+                    'name'       => $setting['name'],
+                    'cat'        => $cat,
+                    'ptype'      => $ptype,
+                    'desc'       => $desc,
+                    'docs'       => $docs,
+                    'url'        => $extraurl,
                     'configured' => false,
                 ];
             }
