@@ -2,6 +2,13 @@
 
 All notable changes to this plugin will be documented in this file.
 
+## [2.5.60] - 2026-10-26
+
+### Fixed
+- Add Custom Pages — Confirmations to Reports.
+- Add verified Custom Pages settings and page-management destinations.
+- Preserve the live catalogue, Spotlight artwork and all unrelated plugin behaviour.
+
 ## [2.5.59] - 2026-10-21
 
 ### Changed

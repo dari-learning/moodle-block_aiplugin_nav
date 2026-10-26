@@ -838,7 +838,7 @@ class block_aiplugin_nav_payload {
 
             if (!empty($plugin['report_url'])) {
                 $reports[] = [
-                    'name'  => $plugin['name'],
+                    'name'  => $plugin['report_name'] ?? $plugin['name'],
                     'cat'   => $cat,
                     'ptype' => $ptype,
                     'desc'  => $desc,
