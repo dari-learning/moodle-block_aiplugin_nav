@@ -2,6 +2,14 @@
 
 All notable changes to this plugin will be documented in this file.
 
+## [2.5.68] - 2026-10-26
+
+### Fixed
+- Restore nine reviewed settings destinations, including Beacon and KPI Settings.
+- Correct exact obsolete settings routes if an older catalogue generator returns them.
+- Bundle Video Evidence promotional artwork so Spotlight does not depend on its remote image.
+- Preserve the existing scrolling fix, all 73 approved plugins, prices and Custom Pages Confirmations.
+
 ## [2.5.67] - 2026-10-26
 
 ### Changed
